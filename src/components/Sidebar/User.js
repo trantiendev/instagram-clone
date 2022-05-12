@@ -3,10 +3,8 @@ import Skeleton from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
 import { DEFAULT_IMAGE_PATH } from '../../constants/paths';
 
-const User = ({ username, fullName }) => {
-  console.log(username, fullName);
-
-  return !username || !fullName ? (
+const User = ({ username, fullName }) =>
+  !username || !fullName ? (
     <Skeleton count={1} height={61} />
   ) : (
     <Link to={`/p/${username}`} className="grid grid-cols-4 gap-4 mb-6 items-center">
@@ -26,7 +24,6 @@ const User = ({ username, fullName }) => {
       </div>
     </Link>
   );
-};
 
 export default User;
 
