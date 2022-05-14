@@ -8,8 +8,6 @@ const Comments = ({ docId, comments: allComments, posted, commentInput }) => {
   const [comments, setComments] = useState(allComments);
   const [commentsSlice, setCommentsSlice] = useState(3);
 
-  console.log(comments);
-
   const showNextComments = () => setCommentsSlice(commentsSlice + 3);
 
   return (
